@@ -1,3 +1,3 @@
-module github.com/3trn0/exchange_rates
+module github.com/3trn0/exchanger
 
 go 1.17

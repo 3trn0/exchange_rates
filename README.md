@@ -1,4 +1,6 @@
-# exchange_rates
+# exchanger
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/3trn0/exchanger.svg)](https://pkg.go.dev/github.com/3trn0/exchanger)
 
 This module stands for currencies exchange.
 
