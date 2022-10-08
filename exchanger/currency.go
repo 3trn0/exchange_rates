@@ -1,6 +1,8 @@
 package exchanger
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Currency type represents any currency value.
 // It is used to implement more accurate calculations on currencies.
@@ -29,4 +31,15 @@ func (c *Currency) Multiply(v float64) *Currency {
 	x := float64(*c)*v + 0.5
 	*c = Currency(x)
 	return c
+}
+
+// CurrencyCode structure keeps certain currency code information represented from json format.
+type CurrencyCode struct {
+	Id   string
+	Name string
+}
+
+// CurrenciesCodesResponse structure keeps information about currencies codes represented from json format.
+type CurrenciesCodesResponse struct {
+	Data []CurrencyCode
 }

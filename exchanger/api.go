@@ -1,15 +1,12 @@
 package exchanger
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
-	"strconv"
-) /*exchange_rates*/
-
-import (
-	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -53,15 +50,6 @@ func GetCurrenciesCodes() (map[string]string, error) {
 
 	if err != nil {
 		return nil, err
-	}
-
-	type CurrencyCode struct {
-		Id   string
-		Name string
-	}
-
-	type CurrenciesCodesResponse struct {
-		Data []CurrencyCode
 	}
 
 	response := CurrenciesCodesResponse{}
